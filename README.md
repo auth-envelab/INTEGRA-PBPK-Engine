@@ -5,27 +5,13 @@
 The public R package is named **`IntegraPBPKengine`**. The GitHub repository is maintained under the **`auth-envelab`** organization.
 
 **Version:** 0.6.0  
-**Currently supported chemical:** Perfluorobutanesulfonic acid (PFBS)  
 **Repository:** https://github.com/auth-envelab/INTEGRA-PBPK-Engine
 
-## Overview
+## About INTEGRA
 
-INTEGRA provides a common R interface for interacting with chemical-specific PBPK models. Its architecture separates the publicly distributed R client from the numerical model engine.
+INTEGRA-PBPK-Engine provides a unified R interface for physiologically based pharmacokinetic modeling, simulation, uncertainty analysis, and exposure reconstruction across supported chemicals.
 
-The PFBS implementation supports:
-
-- Inspection of physiological and chemical parameterization.
-- Deterministic and Bayesian forward dosimetry.
-- User-defined exposure events and unit-labelled dosing.
-- Calibration and conditional external-evaluation results.
-- Posterior calibration-draw replay.
-- Local, Morris, and Sobol sensitivity analysis.
-- Posterior and crossed physiological–kinetic uncertainty analysis.
-- Reconstruction of exposure from serum biomonitoring concentrations.
-- Access to model equations and compartment diagrams.
-- Reproducibility metadata accompanying scientific results.
-
-The current release contains one registered chemical, PFBS. The client interface is designed to accommodate additional chemical models in future releases.
+PFBS is the first implemented chemical, with additional models planned for future releases.
 
 ## Installation
 
@@ -40,7 +26,7 @@ packageVersion("IntegraPBPKengine")
 
 Installation requires R and the package dependencies declared in `DESCRIPTION`.
 
-**Important:** The installed package is an R client, not a locally distributed PBPK numerical engine. Scientific functions require access to a compatible running INTEGRA PBPK service. Installing from GitHub alone does not provide that service. No general-access public endpoint is included in this release documentation.
+Model calculations require a configured INTEGRA service connection.
 
 ## First scientific example
 
@@ -105,27 +91,3 @@ The example specifies continuous oral intake of 37.5 ng/kg/day. For a 70 kg indi
 - [Forward dosimetry](examples/02_Forward_Dosimetry.R)
 - [Exposure reconstruction](examples/03_Exposure_Reconstruction.R)
 - [Sensitivity and uncertainty](examples/04_Sensitivity_Uncertainty.R)
-
-All examples require a configured compatible service for scientific requests.
-
-## Scientific interpretation
-
-The PFBS model is mechanistic and includes physiological compartments, tissue distribution, plasma binding, and renal and hepatobiliary disposition.
-
-The Xu study supplies calibration evidence. Olsen is treated as a conditional evaluation, not as an entirely unconditioned external validation.
-
-Model predictions depend on the exposure scenario, physiological assumptions, parameter selection, calibration uncertainty, and numerical settings. Predicted or reconstructed exposures should not be presented as directly measured exposure values.
-
-## Software architecture
-
-The public repository distributes the R client, help pages, documentation, and examples. The original PFBS model source, native solver implementation, private service, and owner-only research materials are not included.
-
-The R client source is publicly inspectable. Model equations, parameter information, and diagrams exposed through public functions are part of the documented scientific interface.
-
-## Citation
-
-See Formal software citation metadata will be provided in a future release. for software citation metadata. Also cite the scientific model description and relevant underlying studies when using PFBS predictions in scientific publications.
-
-## Availability
-
-Release 0.6.0 is intended for public distribution of the R interface. Access to numerical services must be arranged separately by the service operator.
