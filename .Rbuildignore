@@ -1,0 +1,6 @@
+^docs$
+^examples$
+^CITATION\.cff$
+^\.gitignore$
+^README\.md$
+^CITATION\.cff\.template$
