@@ -1,18 +1,16 @@
 # INTEGRA-PBPK-Engine
 
-**INTEGRA-PBPK-Engine** is an R interface for physiologically based pharmacokinetic (PBPK) modeling, supporting mechanistic dosimetry, scientific model evaluation, parameter exploration, uncertainty analysis, and exposure reconstruction.
-
 ## About INTEGRA
 
 INTEGRA-PBPK-Engine provides a unified R interface for physiologically based pharmacokinetic modeling, simulation, uncertainty analysis, and exposure reconstruction across supported chemicals.
 
 ## Installation
 
-Install version 0.6.0 from GitHub:
+Install version 0.6.1 from GitHub:
 
 ```r
 if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
-devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.0", upgrade = "never")
+devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.1", upgrade = "never")
 library(IntegraPBPKengine)
 packageVersion("IntegraPBPKengine")
 ```

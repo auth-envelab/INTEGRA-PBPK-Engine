@@ -1,5 +1,10 @@
 # Release Notes
 
+## Version 0.6.1
+
+Package metadata, MIT licensing, and documentation updates.
+No changes to the scientific PBPK calculations.
+
 ## Version 0.6.0
 
 Initial release of INTEGRA-PBPK-Engine.

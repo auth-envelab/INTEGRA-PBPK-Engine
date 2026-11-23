@@ -1,4 +1,4 @@
-# INTEGRA-PBPK-Engine 0.6.0
+# INTEGRA-PBPK-Engine 0.6.1
 # Example 1: Explore the registered PFBS model
 # Requires an accessible compatible INTEGRA numerical service.
 

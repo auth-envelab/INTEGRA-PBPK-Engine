@@ -2,7 +2,7 @@
 
 ## Package API
 
-INTEGRA-PBPK-Engine 0.6.0 provides 13 public functions.
+INTEGRA-PBPK-Engine 0.6.1 provides 13 public functions.
 
 The installed R help files are authoritative for exact function signatures and optional argument defaults:
 

@@ -2,7 +2,7 @@
 
 ## 1. System requirements
 
-INTEGRA-PBPK-Engine 0.6.0 is distributed as an R source package.
+INTEGRA-PBPK-Engine 0.6.1 is distributed as an R source package.
 
 Users require a working R installation, access to CRAN for package dependencies, and connectivity to a compatible INTEGRA PBPK service for scientific requests.
 
@@ -12,12 +12,12 @@ Install the tagged release:
 
 ```r
 if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
-devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.0", upgrade = "never")
+devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.1", upgrade = "never")
 library(IntegraPBPKengine)
 packageVersion("IntegraPBPKengine")
 ```
 
-The expected package version is `0.6.0`.
+The expected package version is `0.6.1`.
 
 The latest development branch may differ from the tagged scientific release. Prefer a version tag for reproducible scientific work.
 
@@ -45,7 +45,7 @@ print(models)
 pfbs <- pbpk_models(chemical = "PFBS")
 ```
 
-In version 0.6.0, PFBS is the registered model.
+In version 0.6.1, PFBS is the registered model.
 
 ## 5. Inspect the physiological configuration
 

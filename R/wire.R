@@ -1,4 +1,4 @@
-# Transport plain data between the client and the engine. Numeric columns use
+# Transport plain data between the R client and the configured service. Numeric columns use
 # fixed-width little-endian values to preserve precision and missing values.
 # The protocol accepts only the tags and fixed output classes named below.
 .wire_result_classes <- c("pbpk_study_results", "pbpk_study_fit", "pbpk_xu_posterior",
@@ -77,7 +77,7 @@ pbpk_wire_pack <- function(x) {
     } else if (is.list(value) && is.null(dim(value))) {
       cls <- attr(value, "class", exact = TRUE)
       if (!is.null(cls) && !(length(cls) == 1L && cls %in% .wire_result_classes)) .wire_error()
-      # Drop class before iterating so private lazy result accessors never run.
+      # Drop class before iterating to avoid invoking lazy result accessors.
       out <- list(t = "list", items = encode_items(unclass(value)))
       if (!is.null(cls)) out$cls <- cls
       if (!is.null(label)) out$names <- .wire_strings(label)

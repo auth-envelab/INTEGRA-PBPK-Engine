@@ -1,5 +1,5 @@
 # The chemical-only call returns the selected analysis archive. A method or
-# target scenario requests a fresh numerical calculation from the private core.
+# target scenario requests a fresh numerical calculation from the configured service.
 pbpk_sensitivity <- function(chemical = NULL, method = NULL, scenario = "chronic_bw", profile = "standard", n = NULL, workers = 1L, rerun = FALSE, design = "full", model = NULL) {
   user_call <- sys.call()
   definition <- sys.function()
@@ -75,7 +75,7 @@ pbpk_uncertainty <- function(chemical = NULL, method = NULL, scenario = "chronic
   result <- .client_call(paste0("pbpk_", kind), args)
   if (target) return(result)
   if (!is.list(result) || !identical(result$analysis, kind) || !is.list(result[[kind]]) || !is.data.frame(result$manifest)) {
-    stop("The service did not return the expected ", kind, " archive. Check that the public client and private service have both been updated.", call. = FALSE)
+    stop("The service did not return the expected ", kind, " archive. Check that the installed client and configured service are compatible.", call. = FALSE)
   }
   structure(result, class = paste0("pbpk_", kind, "_results"))
 }

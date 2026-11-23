@@ -4,3 +4,4 @@
 ^\.gitignore$
 ^README\.md$
 ^CITATION\.cff\.template$
+^LICENSE\.md$

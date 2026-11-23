@@ -4,7 +4,7 @@
 
 Two simulations may produce different values because of different exposure schedules, body weights, model parameterizations, posterior draws, numerical settings or model revisions.
 
-INTEGRA 0.6.0 attaches a scientific run record to supported outputs.
+INTEGRA 0.6.1 attaches a scientific run record to supported outputs.
 
 ## 2. Inspect a forward simulation
 
@@ -103,7 +103,7 @@ If synthetic or quantile-derived concentrations were used instead of individual 
 For reproducible analyses, install a tagged release:
 
 ```r
-devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.0", upgrade = "never")
+devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.1", upgrade = "never")
 ```
 
 The service revision should also be recorded. Installing an earlier package version does not automatically reproduce a different service revision.

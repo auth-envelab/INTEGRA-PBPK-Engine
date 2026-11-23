@@ -1,6 +1,6 @@
 # PFBS Model
 
-PFBS is the first chemical supported by INTEGRA-PBPK-Engine, introduced in version 0.6.0.
+PFBS is the first chemical supported by INTEGRA-PBPK-Engine, introduced in version 0.6.1.
 
 This page provides a brief guide to accessing PFBS model information through the package.
 

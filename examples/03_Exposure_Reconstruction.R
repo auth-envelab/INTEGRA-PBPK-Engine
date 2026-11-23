@@ -1,4 +1,4 @@
-# INTEGRA-PBPK-Engine 0.6.0
+# INTEGRA-PBPK-Engine 0.6.1
 # Example 3: Synthetic serum concentration and inverse dosimetry
 # This example does not use measured human biomonitoring observations.
 

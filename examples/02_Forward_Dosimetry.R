@@ -1,4 +1,4 @@
-# INTEGRA-PBPK-Engine 0.6.0
+# INTEGRA-PBPK-Engine 0.6.1
 # Example 2: Deterministic and Bayesian forward dosimetry
 # All concentration values are model predictions, not observed HBM data.
 

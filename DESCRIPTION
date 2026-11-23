@@ -1,18 +1,16 @@
 Package: IntegraPBPKengine
 Type: Package
-Title: R Client for INTEGRA PBPK Models
-Version: 0.6.0
-Authors@R: person("INTEGRA", "project contributors", role = c("aut", "cre"),
-    email = "local-maintainer@example.invalid")
-Description: Queries an owner-operated PBPK service for individual physiology,
-    chemical parameters, study comparisons, sensitivity and uncertainty results,
-    exposure simulations, intake reconstruction, and annotated model diagrams
-    and equations. The client exchanges data over HTTP on loopback or HTTPS.
-License: file LICENSE
+Title: R Interface for INTEGRA PBPK Modeling
+Version: 0.6.1
+Authors@R: person("Achilleas", "Karakoltzidis",
+    email = "achillek@cheng.auth.gr", role = c("aut", "cre"))
+Description: Provides a unified R interface for physiologically based
+    pharmacokinetic modeling across supported chemicals. Functions support
+    simulation, model and parameter exploration, study results,
+    sensitivity and uncertainty analysis, and exposure reconstruction.
+    Numerical calculations require a configured INTEGRA service.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.1.0)
 Imports: curl, graphics, grid, jsonlite, png, tibble, utils
 NeedsCompilation: no
-Packaged: 2026-11-22 15:59:05 UTC; User
-Author: INTEGRA project contributors [aut, cre]
-Maintainer: INTEGRA project contributors <local-maintainer@example.invalid>

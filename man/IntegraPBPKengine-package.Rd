@@ -9,7 +9,7 @@ based pharmacokinetic modeling, simulation, sensitivity analysis,
 uncertainty analysis, and exposure reconstruction.
 }
 \details{
-Version 0.6.0 supports PFBS, with additional chemicals planned for
+Version 0.6.1 supports PFBS, with additional chemicals planned for
 future releases.
 
 Set \code{options(IntegraPBPKengine.url = ...)} or the environment

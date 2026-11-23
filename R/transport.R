@@ -1,5 +1,5 @@
 # Only explicitly supplied arguments cross the service boundary. Omitted defaults
-# belong to the selected service version and are applied by the engine.
+# belong to the selected service version and are applied by the service.
 .client_arguments <- function(call, frame) {
   supplied <- names(as.list(call)[-1L])
   if (!length(supplied)) return(list())
@@ -66,7 +66,7 @@
   if (!is.list(response) || is.data.frame(response) || anyDuplicated(names(response)) ||
       !all(required %in% names(response)) || !identical(response[["record_format"]], "integra.run.1") ||
       !is.list(response[["run_record"]]) || is.data.frame(response[["run_record"]])) {
-    stop("This client needs the private engine build that provides run records.", call. = FALSE)
+    stop("The INTEGRA service response is missing required run-record information.", call. = FALSE)
   }
   value <- response[["value"]]
   if (is.data.frame(value) || !is.list(value)) attr(value, "run_record") <- response[["run_record"]] else value$run_record <- response[["run_record"]]

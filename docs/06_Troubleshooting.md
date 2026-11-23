@@ -6,7 +6,7 @@ Confirm that R is installed, that CRAN is accessible and that the repository nam
 
 ```r
 install.packages("devtools")
-devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.0", upgrade = "never")
+devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.1", upgrade = "never")
 ```
 
 Use the version tag to install a specific release.
@@ -17,7 +17,7 @@ If dependencies cannot be downloaded, check proxy settings, package-library perm
 
 Installation and scientific execution are separate operations.
 
-INTEGRA requires an accessible numerical service. Confirm that the operator supplied a valid connection configuration, that the service is running, and that it supports client version 0.6.0.
+INTEGRA requires an accessible numerical service. Confirm that the operator supplied a valid connection configuration, that the service is running, and that it supports client version 0.6.1.
 
 A localhost address refers to the computer running the current R session.
 
@@ -29,7 +29,7 @@ Use:
 pbpk_models()
 ```
 
-Version 0.6.0 registers PFBS.
+Version 0.6.1 registers PFBS.
 
 ## A dose is rejected
 
