@@ -9,7 +9,7 @@ install.packages("devtools")
 devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.0", upgrade = "never")
 ```
 
-The version tag will be available after the release has been published.
+Use the version tag to install a specific release.
 
 If dependencies cannot be downloaded, check proxy settings, package-library permissions and the R version.
 
@@ -19,7 +19,7 @@ Installation and scientific execution are separate operations.
 
 INTEGRA requires an accessible numerical service. Confirm that the operator supplied a valid connection configuration, that the service is running, and that it supports client version 0.6.0.
 
-A localhost development address on a different computer does not provide access to the owner's service.
+A localhost address refers to the computer running the current R session.
 
 ## A chemical is not recognized
 
@@ -86,10 +86,10 @@ Archived draw tables may be loaded on demand from the service. Inspect the table
 
 Compare the package version, model revision, parameter revision, exposure schedule, demographics, seeds and draw identifiers.
 
-A matching package version does not guarantee identical results against a different private-service model revision.
+A matching package version does not guarantee identical results against a different service or model revision.
 
 ## Reporting a software problem
 
 Include the public package version, operation, anonymized example inputs, error text and run-record fields that do not contain confidential information.
 
-Do not attach private operator source files or confidential human biomonitoring records to a public GitHub issue.
+Do not post credentials or identifiable human biomonitoring records in public GitHub issues.

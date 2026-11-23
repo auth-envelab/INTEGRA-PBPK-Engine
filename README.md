@@ -2,20 +2,13 @@
 
 **INTEGRA-PBPK-Engine** is an R interface for physiologically based pharmacokinetic (PBPK) modeling, supporting mechanistic dosimetry, scientific model evaluation, parameter exploration, uncertainty analysis, and exposure reconstruction.
 
-The public R package is named **`IntegraPBPKengine`**. The GitHub repository is maintained under the **`auth-envelab`** organization.
-
-**Version:** 0.6.0  
-**Repository:** https://github.com/auth-envelab/INTEGRA-PBPK-Engine
-
 ## About INTEGRA
 
 INTEGRA-PBPK-Engine provides a unified R interface for physiologically based pharmacokinetic modeling, simulation, uncertainty analysis, and exposure reconstruction across supported chemicals.
 
-PFBS is the first implemented chemical, with additional models planned for future releases.
-
 ## Installation
 
-Install from the public GitHub repository after version 0.6.0 has been released:
+Install version 0.6.0 from GitHub:
 
 ```r
 if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
@@ -82,8 +75,8 @@ The example specifies continuous oral intake of 37.5 ng/kg/day. For a 70 kg indi
 | [PFBS Model](docs/04_PFBS_Model.md) | Model scope, structure and evaluation |
 | [Reproducibility](docs/05_Reproducibility.md) | Run records, assumptions and uncertainty |
 | [Troubleshooting](docs/06_Troubleshooting.md) | Common installation and simulation problems |
-| [Release Checklist](docs/07_Release_Checklist.md) | Requirements for public distribution |
-| [Service Access and Privacy](docs/08_Service_Access_and_Privacy.md) | Public-client and private-engine boundaries |
+| [Release Notes](docs/07_Release_Notes.md) | Version history and supported capabilities |
+| [Service and Data](docs/08_Service_Access_and_Privacy.md) | Connection setup and data handling |
 
 ## Examples
 
@@ -91,3 +84,5 @@ The example specifies continuous oral intake of 37.5 ng/kg/day. For a 70 kg indi
 - [Forward dosimetry](examples/02_Forward_Dosimetry.R)
 - [Exposure reconstruction](examples/03_Exposure_Reconstruction.R)
 - [Sensitivity and uncertainty](examples/04_Sensitivity_Uncertainty.R)
+
+## Citation

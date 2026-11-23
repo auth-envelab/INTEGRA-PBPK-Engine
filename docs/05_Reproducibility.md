@@ -100,10 +100,10 @@ If synthetic or quantile-derived concentrations were used instead of individual 
 
 ## 10. Version control
 
-For published analyses, install a tagged public-client release rather than an unqualified development branch:
+For reproducible analyses, install a tagged release:
 
 ```r
 devtools::install_github("auth-envelab/INTEGRA-PBPK-Engine", ref = "v0.6.0", upgrade = "never")
 ```
 
-The service revision should also be recorded. Installing an earlier client does not automatically reproduce an earlier private-service state.
+The service revision should also be recorded. Installing an earlier package version does not automatically reproduce a different service revision.

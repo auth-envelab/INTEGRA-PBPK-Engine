@@ -6,11 +6,9 @@ INTEGRA-PBPK-Engine 0.6.0 is distributed as an R source package.
 
 Users require a working R installation, access to CRAN for package dependencies, and connectivity to a compatible INTEGRA PBPK service for scientific requests.
 
-The R client does not require the user to compile or install the private PFBS engine.
-
 ## 2. Install the package
 
-Following public release:
+Install the tagged release:
 
 ```r
 if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
@@ -25,13 +23,14 @@ The latest development branch may differ from the tagged scientific release. Pre
 
 ## 3. Connect to the numerical service
 
-The package delegates scientific calculations to a separately operated INTEGRA service.
+Model calculations require a compatible INTEGRA service connection. Use the service URL and access token supplied for your installation.
 
-Before requesting model results, obtain the current service connection instructions from the operator. These may include an endpoint URL, authentication requirements, a compatible service version, and any request limits.
+```r
+options(IntegraPBPKengine.url = Sys.getenv("INTEGRA_PBPK_URL"))
+options(IntegraPBPKengine.token = Sys.getenv("INTEGRA_PBPK_TOKEN"))
+```
 
-The private owner's development address `127.0.0.1` is not a public endpoint and is not a valid remote address for an unrelated user's computer.
-
-The 0.6.0 repository does not currently specify a publicly hosted endpoint or a universal credential mechanism. Connection instructions must be completed and validated before advertising unrestricted public numerical access.
+Remote connections require HTTPS. Configure the environment variables before running the examples.
 
 ## 4. Identify available models
 

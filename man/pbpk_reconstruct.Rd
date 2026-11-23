@@ -28,7 +28,7 @@ pbpk_reconstruct(chemical = NULL, hbm, method = NULL, n = NULL, seed = 1L,
 \section{Reproducing a run}{
 Use \code{attr(result, "run_record")} on returned scientific tables and
 \code{result$run_record} on scientific list results. The record carries the chemical,
-the private model revision, engine version, parameter set and parameter-data revision.
+the model revision, engine version, parameter set and parameter-data revision.
 It identifies parameter overrides, demographic inputs and their sources, exposure assumptions,
 and available sampling identifiers. For PFBS reconstruction the serum concentration is
 in ng/mL and the body-weight-normalized intake is in ug/kg/day. A default of 30 years

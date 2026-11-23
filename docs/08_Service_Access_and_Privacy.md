@@ -1,55 +1,34 @@
-# Service Access, Architecture and Privacy
+# Service Connection and Data Handling
 
-## Architecture
+## Connection
 
-INTEGRA-PBPK-Engine separates the public R interface from the numerical PBPK implementation.
+INTEGRA model calculations require a compatible computation service.
 
-The public package performs request preparation, transport, interpretation and presentation of returned results. The private engine performs scientific computations under the control of the service operator.
+Configure the service URL and access token using the connection information supplied for your installation.
 
-This distinction permits a stable user-facing interface without distributing the original PFBS model implementation.
+```r
+options(IntegraPBPKengine.url = Sys.getenv("INTEGRA_PBPK_URL"))
+options(IntegraPBPKengine.token = Sys.getenv("INTEGRA_PBPK_TOKEN"))
+```
 
-## What is included publicly?
+Remote service connections require HTTPS.
 
-The GitHub repository includes package metadata, public R functions, documentation, plotting helpers and examples.
+## Data handling
 
-Anyone can read the public R client source code.
+Model inputs are transmitted to the configured service for processing.
 
-## What is not distributed?
+When using human biomonitoring data, submit only the fields needed for the analysis. Avoid including names, personal identifiers, or other unnecessary sensitive information.
 
-The public release excludes private model implementation source, native solver source, private service code, internal research scripts and unpublished data assets.
+Users should follow applicable research ethics, confidentiality requirements, and data-protection procedures.
 
-These components are maintained separately by the operator.
+## Results
 
-## Scientific transparency
+INTEGRA returns model predictions, numerical results, and relevant run metadata to R.
 
-The public interface provides access to model parameters, equations, compartment descriptions and simulated outputs.
+Results can be inspected, analyzed, and saved locally using standard R functions.
 
-Consequently, the public repository does not promise that the model's scientific structure is secret. It protects the original implementation files by retaining them outside the distributed package.
+## Support
 
-## Service requirements
+When reporting software issues, provide the package version, operation, error message, and an anonymized example where possible.
 
-Scientific model requests require an available compatible service.
-
-Version 0.6.0 documentation does not specify a universal public endpoint or authentication procedure. These must be defined by the operator before general-access numerical use is advertised.
-
-Service installation and deployment are outside the public R package.
-
-## HBM privacy
-
-Human biomonitoring inputs may contain sensitive information. The public package is not a guarantee of privacy for data sent to a separately hosted service.
-
-Before uploading real individual-level HBM information, users should understand the service operator's data processing, authentication, storage, logging and retention arrangements.
-
-Where appropriate, de-identify inputs and follow applicable ethical and data-protection requirements.
-
-## Reproducibility
-
-The returned run record documents model revisions and selected execution assumptions.
-
-Users should preserve an appropriate versioned record of their scientific inputs and outputs without adding confidential or personal information to a public repository.
-
-## Reporting vulnerabilities
-
-Do not post credentials, private datasets, service configuration secrets or private model source in public GitHub issues.
-
-Contact the repository maintainers through their official security-reporting channel when available.
+Do not publish credentials or identifiable HBM records in GitHub issues.

@@ -2,11 +2,9 @@
 
 ## 1. Scope
 
-INTEGRA-PBPK-Engine provides a public R interface to a privately operated numerical PBPK engine. Version 0.6.0 includes the PFBS model.
+INTEGRA-PBPK-Engine provides a unified R interface for modeling, simulation, sensitivity analysis, uncertainty analysis, and exposure reconstruction across supported chemicals.
 
-The model can simulate external dosing and internal concentrations, reproduce supported study calculations, investigate sensitivity and uncertainty, and reconstruct exposure from serum concentrations using the complete PBPK model.
-
-The selected chemical must be supported by the service. Available functions and model-specific capabilities can be inspected with `pbpk_models()`.
+The examples in this guide use PFBS, the first implemented chemical. Use `pbpk_models()` to inspect available models and their supported capabilities.
 
 ## 2. Physiological and chemical parameters
 
@@ -47,7 +45,7 @@ An exposure event includes:
 | `unit` | Optional explicit physical unit |
 | `dose_interval_h` | Optional interval for a bolus entered using a rate unit |
 
-For the PFBS model, `m_oral` and `m_inhalation` are rate states with native units of micrograms per hour. `m_stomach` and `m_dermal` are mass states with native units of micrograms.
+For PFBS, `m_oral` and `m_inhalation` are rate states with native units of micrograms per hour. `m_stomach` and `m_dermal` are mass states with native units of micrograms.
 
 Examples:
 
@@ -142,7 +140,7 @@ replay$calibration$Xu$deterministic$metrics
 replay$evaluation$Olsen$deterministic$metrics
 ```
 
-The Olsen comparison uses baseline and protocol information specific to that study. It must not be represented as an entirely independent, unconditioned population prediction.
+Model-specific calibration and evaluation methods are described in the corresponding scientific publications.
 
 ## 7. PFBS posterior replay
 
@@ -239,7 +237,7 @@ equations <- pbpk_equations(chemical = "PFBS", file = tempfile(fileext = ".pdf")
 diagram <- pbpk_mermaid(chemical = "PFBS", plot = FALSE)
 ```
 
-The equations and diagram describe the model scientifically. They are not the private numerical implementation source code.
+These functions provide the available model equations and compartment diagram for the selected chemical.
 
 ## 12. Reproducibility
 

@@ -30,7 +30,7 @@ pbpk_simulate(events, times, parameters = NULL, initial = NULL,
 \item{rtol}{Relative solver tolerance.}
 \item{atol}{Absolute solver tolerance.}
 \item{maxsteps}{Maximum integrator steps per interval.}
-\item{solver}{ODE solver supported by the private engine.}
+\item{solver}{ODE solver supported by the selected model.}
 \item{effective_parameters}{Named numeric vector of edits in solver units. See the parameter tables for names and units. Each selected parameter is supplied once.}
 \item{outputs}{Requested state/auxiliary names or \code{"all"}.}
 \item{model}{Chemical selector supported by the corresponding operation.}
